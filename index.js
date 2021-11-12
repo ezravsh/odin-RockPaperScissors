@@ -16,17 +16,17 @@ function playRound(playerSelection, computerSelection){
     }
     }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
+//const playerSelection = prompt(`Type: "rock", "paper", or "scissors:`);
+//const computerSelection = computerPlay();
 //console.log(playRound(playerSelection, computerSelection));
 
 function game(){
     let scoreP = 0;
     let scoreC = 0;
     for (let i = 1; i < 6; i++){
-        let result = playRound(playerSelection, computerPlay());
-        console.log(i)
-        console.log(result)
+        let result = playRound(prompt(`Type: "rock", "paper", or "scissors:`), computerPlay())
+        //console.log(i)
+        //console.log(result)
         if (result == "You win!"){
             scoreP +=1;
         } else if (result == "You lose!"){
