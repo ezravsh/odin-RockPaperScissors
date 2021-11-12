@@ -18,4 +18,27 @@ function playRound(playerSelection, computerSelection){
 
 const playerSelection = "rock";
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
+
+function game(){
+    let scoreP = 0;
+    let scoreC = 0;
+    for (let i = 1; i < 6; i++){
+        let result = playRound(playerSelection, computerPlay());
+        console.log(i)
+        console.log(result)
+        if (result == "You win!"){
+            scoreP +=1;
+        } else if (result == "You lose!"){
+            scoreC +=1;
+        }}
+    if (scoreP > scoreC){
+        return `The winner is YOU!, your score is ${scoreP}, computer scores ${scoreC}`
+    } else if (scoreP === scoreC){
+        return `Tie, your score is ${scoreP}, computer scores ${scoreC}`
+    } else {
+        return `Computer is the winner!, your score is ${scoreP}, computer scores ${scoreC}`
+    }
+}
+
+console.log(game())
