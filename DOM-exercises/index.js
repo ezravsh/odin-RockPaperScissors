@@ -29,3 +29,6 @@ newdiv.appendChild(divh1);
 newdiv.appendChild(divp);
 
 container.appendChild(newdiv);
+
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
